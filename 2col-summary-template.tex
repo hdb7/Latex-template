@@ -1,0 +1,69 @@
+%%% Template for writing summary 
+
+\documentclass[12pt,landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx} %for inserting images
+\graphicspath{ {./images/} }  % folder where images file is
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage[autostyle]{csquotes}
+\renewcommand{\baselinestretch}{0.8}
+\setlength{\columnsep}{1cm}
+\usepackage{xcolor} % font coloring
+\usepackage{sectsty}
+%\sectionfont{\color{red}}  % sets colour of sections
+%\subsectionfont{\color{purple}}
+%\subsubsectionfont{\color{blue}}
+\setlength{\parindent}{-1em}
+
+%% title coloring
+\definecolor{astral}{RGB}{46,116,181}
+\definecolor{darkblue}{RGB}{50,76,168}
+\definecolor{darkbrown}{RGB}{99,12,8}
+
+%%% Coloring macros
+\newcommand{\cred}[1]{\textcolor{red}{#1}}
+\newcommand{\cblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\ccyan}[1]{\textcolor{cyan}{#1}}
+\newcommand{\cgreen}[1]{\textcolor{green}{#1}}
+\newcommand{\cyellow}[1]{\textcolor{yellow}{#1}}
+\newcommand{\cpurple}[1]{\textcolor{purple}{#1}}
+\newcommand{\corange}[1]{\textcolor{orange}{#1}}
+
+%% math macros
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\W}{\mathbb{W}}
+
+\pagestyle{fancy}
+\fancyhf{Combinatorics CheatSheet}
+\lhead{Hamjak}
+\rhead{June 26, 2021}
+\rfoot{Page \thepage}
+\linespread{0.5}
+
+\begin{document}
+\begin{multicols*}{2}
+  \section{Rule of Sum}
+  If there are $n$ choices for one action and $m$ choices for another action, and the two actions cannot be done at the same time then, there are $n+m$ ways to choose one of these actions.
+  \section{Rule of Product}
+  If there are $n$ no. of ways of choosing an object satisfying conditions $N$ and $m$ no. of ways of choosing an object satisfying conditions $M$ then, no. of ways choosing two elements such that the first satisfies condition $N$ and second satisfies condition $M$ is $N\times M$.
+  \section{Well Ordering Principle}
+  Every non-empty set $S$ of natural numbers contains a least element; i.e, there is some number $a\in S$ such that $a\leq b \; \forall b\in S$.
+  
+  \section{Permutation(Arrangement)}
+  Permutation of $n$ objects taken $r$ at a time is :\\ 
+  $P(n,r) = n(n-1)(n-2)\dots(n-r+1) = \frac{n!}{(n-r)!}$\\
+  \textit{Permutation of $n$ items taken all at a time is $n!$}
+  \subsection*{Problems}
+  A bit is either $0$ or $1$; a byte is a sequence of $8$ bits. Find (a) the possible no. of bytes (b) 
+\end{multicols*}
+\end{document}

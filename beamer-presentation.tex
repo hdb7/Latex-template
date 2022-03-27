@@ -1,0 +1,96 @@
+\documentclass{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx} %for inserting images
+\graphicspath{ {./images/} }  % folder where images file is
+\usepackage[autostyle]{csquotes}
+%\usetheme{Warsaw}
+%\usetheme{CambridgeUS}
+%\usetheme{Madrid}
+\usetheme{Pittsburgh}
+\title{Partial Order Set}
+\subtitle{}
+\author{Hamjak Debbarma}
+\institute[TIT]{
+Dept. Of Computer Science\\
+Tripura Institute of Technology, Agartala\\
+\medskip
+\textit{hamjakdb@yahoo.com}
+}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item What is POSET ? \pause
+\item Proof some results \pause
+\item Product Order
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What is POSET ?}
+Let $R\subseteq A\times A$, where $A$ is finite set. Then, $R$ is partial order relation iff -
+\begin{itemize}
+\item Reflexive \(\forall a\in A, (a,a)\in R\)
+\item Anti-symmetric \(\forall a,b\in A, (a,b)\in R\; \text{and}\; (b,a)\in R \implies a=b\)
+\item Transitive \(\forall a,b,c\in A, (a,b)\in R\; \text{and}\; (b,c)\in R\) implies, $(a,c)\in R$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{POSET}
+\begin{definition}
+A set $S$ together with the partial order relation $R$ is called a \textit{partial order set or POSET}. Denoted as $(S,\preceq)$.
+\end{definition}
+\textbf{Note: } $\preceq$ is not $\leq$, its read as \enquote{precedes}.\\
+\textbf{Examples,} $a \preceq b$ read as $a$ `precedes' $b$
+\end{frame}
+
+\begin{frame}
+\begin{example}
+Q. Show that $R=\{(a,b)\in \mathbb{Z}\times\mathbb{Z} \mid a-b \leq 0\}$ is partial order.
+\end{example}
+\begin{block}{Proof}
+Let $a\in \mathbb{Z}$ then, $a-a \leq 0$. Therefore, $(a,a)\in R, \forall a\in \mathbb{Z}$ so $R$ is reflexive. Now, for $(a,b)\in R$ and  $(b,a)\in R$, $a-b \leq 0$ and $b-a \leq 0$ which implies, $a\leq b$ and $b\leq a \implies a=b$, $R$ is Anti-symmetric. Again, for $(a,b)\in R$ and  $(b,c)\in R$, $a-b \leq 0$ and $b-a \leq 0$ implies, $a-b+b-c \leq 0 \implies a-c \leq 0$.Therefore, $R$ is Transitive. Hence, $R$ is partial order.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+Q. Is $R=\{(m,n)\in \mathbb{Z}\times \mathbb{Z} \mid m+n\; \text{is even}\; \forall m,n \in \mathbb{Z}\}$ a partial order?
+\end{example}
+\begin{block}{Proof}
+We know $m$ and $n$ has to be both odd or even for $m+n$ to be even, $m$ and $n$ do not have to be necessarily same for their sum to be even. So, it is not Anti-symmetric. Hence, $R$ is not partial order relation.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Product Order}
+\begin{definition}
+Let $s,s^{'}\in S$ and $t,t^{'}\in T$, $s\preceq s^{'}$ in $S$ and $t\preceq t^{'}$ in $T$ then, $S\times T$ is called the \textbf{product order} such that $(s,t)\preceq (s^{'},t^{'})\in S\times T$
+\end{definition}
+\end{frame}
+
+\begin{frame}
+\begin{theorem}
+If $(A,\preceq)$ and $(B,\preceq)$ are poset, then $(A\times B, \preceq)$ is also poset, where $\preceq$ is defined by $(a,b)\preceq (a^{'},b^{'})$ if $a\preceq a^{'}$ in $A$ and $b\preceq b^{'}$ in $B$.
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Summary}
+\begin{itemize}
+\item We have learn what a POSET is ?
+\item we have seen when $R$ is partial order
+\end{itemize}
+\end{block}
+\end{frame}
+\end{document}

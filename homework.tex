@@ -1,0 +1,81 @@
+%%---- HOMEWORK & PROGRAMMING ASSIGNMENT------
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage[autostyle]{csquotes}
+\renewcommand{\baselinestretch}{0.8} %space betwn para
+\setlength{\columnsep}{1cm}
+\usepackage{xcolor} % font coloring
+\usepackage{sectsty}
+\setlength{\parindent}{0.2em} %text ni indentation
+\usepackage{color}
+
+%% ---Syntax color for Programming language ------
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C, %% -language
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\begin{document}
+
+%-------------------------------
+% TITLE SECTION
+%-------------------------------
+\fancyhead[C]{}
+\hrule \medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+  \raggedright
+  \footnotesize
+  YOURNAME \hfill\\   
+  YOURSTUDENTID\hfill\\
+  YOURMAIL
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+  \centering 
+  \large 
+  Homework Assignment 1\\ 
+  \normalsize 
+  Machine Learning 1, 17/18\\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+  \raggedleft
+  \today\hfill\\
+\end{minipage}
+\medskip\hrule 
+\bigskip %blank space ni bagwi
+
+%-------------------------------
+% CONTENTS
+%-------------------------------
+
+\section{Intro}
+Hello
+  \begin{lstlisting}
+    %% --code---
+  \end{lstlisting}
+\end{document}
